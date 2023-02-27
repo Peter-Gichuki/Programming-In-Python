@@ -1,15 +1,18 @@
-subject1=int(input("Enter the marks for subject 1="))
-subject2=int(input("Enter the marks for subject 2="))
-subject3=int(input("Enter the marks for subject 3="))
-average=(subject1+subject2+subject3)/3
-print("Average marks=", average)
-if (average>=70) and (average<100):
-    print("Grade=A")
-elif (average>=60) and (average<=69):
-    print("Grade=B")
-elif (average>=50) and (average<=59):
-    print("Grade=c")
-elif (average>=40) and (average<=49):
-    print("Grade=D")
-elif (average>=0) and (average<=39):
-    print("Grade=E")
+#program to output the grade using a function
+marks=int(input("Enter your marks="))
+
+def grading(marks):
+    if (marks<=100) and (marks>=70):
+        print("A")
+    elif (marks<=69) and (marks>=60):
+        print("B")
+    elif (marks<=59) and (marks>=50):
+        print("C")
+    elif (marks<=49) and (marks>=40):
+        print("D")
+    elif (marks<=39) and (marks>=0):
+        print("D")   
+    else:
+        print("Enter valid marks")
+
+print(grading(marks))
